@@ -5,9 +5,9 @@
  *Descripción de la clase: aquí es donde se muestra la cuenta de los productos
  *que el cliente pidio y donde puede pagar
  */
-package Vista;
+package vista;
 
-import Controller.ProductoController;
+import controller.ProductoController;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;

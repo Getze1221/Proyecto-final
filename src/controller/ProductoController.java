@@ -1,5 +1,5 @@
 
-package Controller;
+package controller;
 
 import java.util.List;
 import javax.swing.table.DefaultTableModel;

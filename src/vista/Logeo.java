@@ -4,7 +4,7 @@
  *Última fecha de actualización: 22/05/2021
  *Descripción de la clase: Aquí es donde ingresara el nombre de usuario y contraseña y se validara que sea correcta
  */
-package Vista;
+package vista;
 
 import pojo.Usuario;
 import javax.swing.JOptionPane;
