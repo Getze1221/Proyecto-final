@@ -1,4 +1,10 @@
-
+/**
+ *Nombre del autor: Getzemani Alejandro Gonzalez Cruz
+ *Fecha de creación: 14/05/2021
+ *Última fecha de actualización: 18/05/2021
+ *Descripción de la clase: Aquí se crean las variables donde se guardan los
+ * nombres de la comidatacos
+ */
 package pojo;
 
 
@@ -44,7 +50,7 @@ public class ComidaTacos {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-
+    //Retorna el nombre y el precio
     @Override
     public String toString() {
         return  nombre + "$:" + precio;

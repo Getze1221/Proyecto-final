@@ -57,7 +57,8 @@ public final class Postres extends javax.swing.JFrame {
      * que se muestre en pantalla
      */
     private void llenarHelado() {
-        ArrayList<Producto> ListaHelado = utilidades.UtilidadesProducto.llenarHelado();
+        ArrayList<Producto> 
+                ListaHelado = utilidades.UtilidadesProducto.llenarHelado();
 
         for (Producto C : ListaHelado) {
             BoxHelado.addItem(C);
@@ -65,7 +66,8 @@ public final class Postres extends javax.swing.JFrame {
     }
 
     private void llenarPastel() {
-        ArrayList<Producto> ListaPastel = utilidades.UtilidadesProducto.llenarPastel();
+        ArrayList<Producto> 
+                ListaPastel = utilidades.UtilidadesProducto.llenarPastel();
 
         for (Producto C : ListaPastel) {
             BoxPastel.addItem(C);
@@ -73,7 +75,8 @@ public final class Postres extends javax.swing.JFrame {
     }
 
     private void llenarTarta() {
-        ArrayList<Producto> ListaTarta = utilidades.UtilidadesProducto.llenarTarta();
+        ArrayList<Producto> 
+                ListaTarta = utilidades.UtilidadesProducto.llenarTarta();
 
         for (Producto C : ListaTarta) {
             BoxTarta.addItem(C);
@@ -402,7 +405,8 @@ public final class Postres extends javax.swing.JFrame {
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
         //Botón para salir del programa
-        JOptionPane.showMessageDialog(null, "Gracias por su visita vuelva pronto");
+        JOptionPane.showMessageDialog
+        (null, "Gracias por su visita vuelva pronto");
         System.exit(0);
     }//GEN-LAST:event_boton4ActionPerformed
 
@@ -413,38 +417,62 @@ public final class Postres extends javax.swing.JFrame {
     }//GEN-LAST:event_boton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        //Aquí se lee el pedido y la cantidad que se va a ordenar y se manda a la cuenta
-        for (int i = 0; i < (Integer) jSpinner1.getValue(); i++) {
-            cuenta.add(utilidades.UtilidadesProducto.llenarHelado().get(BoxHelado.getSelectedIndex()));
+        //Aquí se lee el pedido y la cantidad que se va a ordenar y se manda 
+        //a la cuenta
+        if((Integer) jSpinner1.getValue()== 0){
+            JOptionPane.showMessageDialog
+        (null, "Por favor seleccione una cantidad");
+        }else{
+            for (int i = 0; i < (Integer) jSpinner1.getValue(); i++) {
+            cuenta.add(utilidades.UtilidadesProducto.llenarHelado().get
+        (BoxHelado.getSelectedIndex()));
         }
 
         abrir.actualizarCuenta(cuenta);
 
         JOptionPane.showMessageDialog(null, "Su orden se guardo con éxito");
+
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        //Aquí se lee el pedido y la cantidad que se va a ordenar y se manda a la cuenta
+        //Aquí se lee el pedido y la cantidad que se va a ordenar y 
+        //se manda a la cuenta
 
-        for (int i = 0; i < (Integer) jSpinner2.getValue(); i++) {
-            cuenta.add(utilidades.UtilidadesProducto.llenarTarta().get(BoxTarta.getSelectedIndex()));
+       if((Integer) jSpinner2.getValue()== 0){
+            JOptionPane.showMessageDialog
+        (null, "Por favor seleccione una cantidad");
+        }else{
+            for (int i = 0; i < (Integer) jSpinner2.getValue(); i++) {
+            cuenta.add(utilidades.UtilidadesProducto.llenarTarta().get
+        (BoxTarta.getSelectedIndex()));
         }
 
         abrir.actualizarCuenta(cuenta);
 
         JOptionPane.showMessageDialog(null, "Su orden se guardo con éxito");
+
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        //Aquí se lee el pedido y la cantidad que se va a ordenar y se manda a la cuenta
+        //Aquí se lee el pedido y la cantidad que se va a ordenar y 
+        //se manda a la cuenta
 
-        for (int i = 0; i < (Integer) jSpinner3.getValue(); i++) {
-            cuenta.add(utilidades.UtilidadesProducto.llenarPastel().get(BoxPastel.getSelectedIndex()));
+        if((Integer) jSpinner3.getValue()== 0){
+            JOptionPane.showMessageDialog
+        (null, "Por favor seleccione una cantidad");
+        }else{
+            for (int i = 0; i < (Integer) jSpinner3.getValue(); i++) {
+            cuenta.add(utilidades.UtilidadesProducto.llenarPastel().get
+        (BoxPastel.getSelectedIndex()));
         }
 
         abrir.actualizarCuenta(cuenta);
 
         JOptionPane.showMessageDialog(null, "Su orden se guardo con éxito");
+
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     public void botintransparente() {

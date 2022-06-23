@@ -22,8 +22,8 @@ public final class Cuenta extends javax.swing.JFrame {
     //Se crean dos variables globales para las operaciones de la cuenta del 
     //cliente y su pago
     private double suma = 0;
-    private double t = 0;
-    private double p = 0;
+    private double total = 0;
+    private double pago = 0;
 
     public Cuenta() {
         initComponents();
@@ -298,11 +298,12 @@ public final class Cuenta extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //Se llevan a cabo las operaciones de pago por parte del usuario y 
         //válida los campos
-        double pago = Double.parseDouble(this.pagar.getText());
-        if (t > pago) {
-            JOptionPane.showMessageDialog(null, "El pago es menor a la cuenta total,ingrese un valor mayor");
+        pago = Double.parseDouble(this.pagar.getText());
+        if (total > pago) {
+            JOptionPane.showMessageDialog
+        (null, "El pago es menor a la cuenta total,ingrese un valor mayor");
         } else {
-            cambio.setText(String.valueOf("$: " + (pago - t)));
+            cambio.setText(String.valueOf("$: " + (pago - total)));
             JOptionPane.showMessageDialog(null, "Gracias por su preferencia");
         }
 
@@ -313,18 +314,18 @@ public final class Cuenta extends javax.swing.JFrame {
         //Se calcula el costo total de los productos contenidos en la tabla
         if (jTable2.getRowCount() > 0) {
             for (int i = 0; i < jTable2.getRowCount(); i++) {
-                p = Double.parseDouble(jTable2.getValueAt(i, 2).toString());
-                t += p;
+                pago = Double.parseDouble(jTable2.getValueAt(i, 2).toString());
+                total += pago;
             }
-            jTextField1.setText("$: " + t);
+            jTextField1.setText("$: " + total);
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void pagarKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pagarKeyTyped
         // válida los campos para que solo acepte números
-        char c = evt.getKeyChar();
-        if ((c < '0' || c > '9')) {
+        char caracteres = evt.getKeyChar();
+        if ((caracteres < '0' || caracteres > '9')) {
             evt.consume();
         }
 

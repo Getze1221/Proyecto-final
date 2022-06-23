@@ -1,6 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+/**
+ *Nombre del autor: Getzemani Alejandro Gonzalez Cruz
+ *Fecha de creación: 14/05/2021
+ *Última fecha de actualización: 18/05/2021
+ *Descripción de la clase: Aquí se crean las variables donde se guardan los
+ * nombres de la comidaspa
  */
 package pojo;
 
@@ -46,7 +49,7 @@ public class ComidaSpa {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-
+    //Retorna el nombre y el precio
     @Override
     public String toString() {
         return   nombre + "$:" + precio;

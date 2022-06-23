@@ -37,16 +37,14 @@ public final class Bebidas extends javax.swing.JFrame {
         llenarAgua();
         llenarRefrescos();
     }
-    
-    
-    
 
-    /**
+    /*
      * Se manda el contenido de la lista para el llenado de los 3 combobox y que
      * se muestre en pantalla
      */
     private void llenarAlcohol() {
-        ArrayList<Producto> ListaAlcohol = utilidades.UtilidadesProducto.llenarAlcohol();
+        ArrayList<Producto> 
+                ListaAlcohol = utilidades.UtilidadesProducto.llenarAlcohol();
 
         for (Producto C : ListaAlcohol) {
             BoxAlcohol.addItem(C);
@@ -54,7 +52,8 @@ public final class Bebidas extends javax.swing.JFrame {
     }
 
     private void llenarAgua() {
-        ArrayList<Producto> ListaAgua = utilidades.UtilidadesProducto.llenarAgua();
+        ArrayList<Producto>
+                ListaAgua = utilidades.UtilidadesProducto.llenarAgua();
 
         for (Producto C : ListaAgua) {
             BoxAgua.addItem(C);
@@ -62,7 +61,8 @@ public final class Bebidas extends javax.swing.JFrame {
     }
 
     private void llenarRefrescos() {
-        ArrayList<Producto> ListaRefrescos = utilidades.UtilidadesProducto.llenarRefresco();
+        ArrayList<Producto> 
+                ListaRefrescos = utilidades.UtilidadesProducto.llenarRefresco();
 
         for (Producto C : ListaRefrescos) {
             BoxRefresco.addItem(C);
@@ -399,41 +399,62 @@ public final class Bebidas extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         //Aquí se lee el pedido y la cantidad que se va a ordenar y se manda a 
         //la cuenta
-        for (int i = 0; i < (Integer) jSpinner1.getValue(); i++) {
-            cuenta.add(utilidades.UtilidadesProducto.llenarAgua().get(BoxAgua.getSelectedIndex()));
+        
+        if((Integer) jSpinner1.getValue()== 0){
+            JOptionPane.showMessageDialog
+        (null, "Por favor seleccione una cantidad");
+        }else{
+            for (int i = 0; i < (Integer) jSpinner1.getValue(); i++) {
+            cuenta.add(utilidades.UtilidadesProducto.llenarAgua().get
+        (BoxAgua.getSelectedIndex()));
         }
 
         abrir.actualizarCuenta(cuenta);
 
         JOptionPane.showMessageDialog(null, "Su orden se guardo con éxito");
 
-
+        }
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         //Aquí se lee el pedido y la cantidad que se va a ordenar y se manda a 
         //la cuenta
 
-        for (int i = 0; i < (Integer) jSpinner3.getValue(); i++) {
-            cuenta.add(utilidades.UtilidadesProducto.llenarAlcohol().get(BoxAlcohol.getSelectedIndex()));
+        if((Integer) jSpinner3.getValue()== 0){
+            JOptionPane.showMessageDialog
+        (null, "Por favor seleccione una cantidad");
+        }else{
+            for (int i = 0; i < (Integer) jSpinner3.getValue(); i++) {
+            cuenta.add(utilidades.UtilidadesProducto.llenarAlcohol().get
+        (BoxAgua.getSelectedIndex()));
         }
 
         abrir.actualizarCuenta(cuenta);
 
         JOptionPane.showMessageDialog(null, "Su orden se guardo con éxito");
+
+        }
 
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         //Aquí se lee el pedido y la cantidad que se va a ordenar y se manda a 
         //la cuenta
-        for (int i = 0; i < (Integer) jSpinner2.getValue(); i++) {
-            cuenta.add(utilidades.UtilidadesProducto.llenarRefresco().get(BoxRefresco.getSelectedIndex()));
+       if((Integer) jSpinner2.getValue()== 0){
+            JOptionPane.showMessageDialog
+        (null, "Por favor seleccione una cantidad");
+        }else{
+            for (int i = 0; i < (Integer) jSpinner2.getValue(); i++) {
+            cuenta.add(utilidades.UtilidadesProducto.llenarRefresco().get
+        (BoxAgua.getSelectedIndex()));
         }
 
         abrir.actualizarCuenta(cuenta);
 
         JOptionPane.showMessageDialog(null, "Su orden se guardo con éxito");
+
+        }
 
     }//GEN-LAST:event_jButton5ActionPerformed
 

@@ -412,14 +412,20 @@ public final class Menu extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         //Aquí se lee el pedido y la cantidad que se va a ordenar y se manda a 
         //la cuenta
-        for (int i = 0; i < (Integer) jSpinner1.getValue(); i++) {
+        if((Integer) jSpinner1.getValue()== 0){
+            JOptionPane.showMessageDialog
+        (null, "Por favor seleccione una cantidad");
+        }else{
+            for (int i = 0; i < (Integer) jSpinner1.getValue(); i++) {
             cuenta.add(utilidades.UtilidadesProducto.llenarComida().get
         (BoxSpa.getSelectedIndex()));
         }
 
         abrir.actualizarCuenta(cuenta);
 
-        JOptionPane.showMessageDialog(null, "Su orden se guardó con éxito");
+        JOptionPane.showMessageDialog(null, "Su orden se guardo con éxito");
+
+        }
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -427,28 +433,40 @@ public final class Menu extends javax.swing.JFrame {
         //Aquí se lee el pedido y la cantidad que se va a ordenar y se manda a 
         //la cuenta
 
-        for (int i = 0; i < (Integer) jSpinner2.getValue(); i++) {
+        if((Integer) jSpinner2.getValue()== 0){
+            JOptionPane.showMessageDialog
+        (null, "Por favor seleccione una cantidad");
+        }else{
+            for (int i = 0; i < (Integer) jSpinner2.getValue(); i++) {
             cuenta.add(utilidades.UtilidadesProducto.llenartacos().get
         (BoxTacos.getSelectedIndex()));
         }
 
         abrir.actualizarCuenta(cuenta);
 
-        JOptionPane.showMessageDialog(null, "Su orden se guardó con éxito");
+        JOptionPane.showMessageDialog(null, "Su orden se guardo con éxito");
+
+        }
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         //Aquí se lee el pedido y la cantidad que se va a ordenar y se manda a 
         //la cuenta
-        for (int i = 0; i < (Integer) jSpinner3.getValue(); i++) {
+        if((Integer) jSpinner3.getValue()== 0){
+            JOptionPane.showMessageDialog
+        (null, "Por favor seleccione una cantidad");
+        }else{
+            for (int i = 0; i < (Integer) jSpinner3.getValue(); i++) {
             cuenta.add(utilidades.UtilidadesProducto.llenarhambu().get
         (BoxHamb.getSelectedIndex()));
         }
 
         abrir.actualizarCuenta(cuenta);
 
-        JOptionPane.showMessageDialog(null, "Su orden se guardó con éxito");
+        JOptionPane.showMessageDialog(null, "Su orden se guardo con éxito");
+
+        }
 
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -470,20 +488,25 @@ public final class Menu extends javax.swing.JFrame {
 
     public static void main(String args[]) {
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (javax.swing.UIManager.LookAndFeelInfo info : 
+                    javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger
+        (Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger
+        (Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger
+        (Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger
+        (Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {

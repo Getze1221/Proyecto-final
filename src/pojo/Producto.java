@@ -1,3 +1,10 @@
+/**
+ *Nombre del autor: Getzemani Alejandro Gonzalez Cruz
+ *Fecha de creación: 14/05/2021
+ *Última fecha de actualización: 22/05/2021
+ *Descripción de la clase: Aquí se crean las variables donde se guardan los
+ * nombres de los productos
+ */
 package pojo;
 
 public class Producto {
@@ -39,7 +46,7 @@ public class Producto {
     public void setPrecio(String precio) {
         this.precio = precio;
     }
-
+    //Retorna el nombre y precio
     @Override
     public String toString() {
         return  nombre + "$: " + precio;

@@ -1,4 +1,9 @@
-
+/**
+ *Nombre del autor: Getzemani Alejandro Gonzalez Cruz
+ *Fecha de creación: 14/05/2021
+ *Última fecha de actualización: 22/05/2021
+ *Descripción de la clase: Aquí se controla el contenido de las listas
+ */
 package controller;
 
 import java.util.List;

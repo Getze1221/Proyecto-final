@@ -2,7 +2,8 @@
  *Nombre del autor: Getzemani Alejandro Gonzalez Cruz
  *Fecha de creación: 18/05/2021
  *Última fecha de actualización: 22/05/2021
- *Descripción de la clase: Aquí es donde ingresara el nombre de usuario y contraseña y se validara que sea correcta
+ *Descripción de la clase: Aquí es donde ingresara el nombre de usuario y 
+ * //contraseña y se validara que sea correcta
  */
 package vista;
 
@@ -182,7 +183,8 @@ public class Logeo extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Aquí es donde se llevara a cabo la comprobación del usuario que va a entrar:
+        // Aquí es donde se llevara a cabo la comprobación del usuario 
+        //que va a entrar:
         Usuario usuario = new Usuario();
         usuario.setNombre(this.jTextField1.getText());
         usuario.setContraseña(this.jPasswordField1.getText());
@@ -191,7 +193,8 @@ public class Logeo extends javax.swing.JFrame {
 
         if (this.validacionUsuario.validarUsuario(this.admin, usuario)) {
             if (this.validacionUsuario.validarUsuario(this.admin, usuario)) {
-                JOptionPane.showMessageDialog(null, "Bienvenido: " + this.admin.getTipo());
+                JOptionPane.showMessageDialog
+        (null, "Bienvenido: " + this.admin.getTipo());
                 Menu abrir = new Menu();
                 abrir.setVisible(true);
                 this.setVisible(false);
